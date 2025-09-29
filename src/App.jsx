@@ -9,7 +9,7 @@ import Services from './Pages/Header/Services'
 import AboutUs from "./Pages/Header/AboutUs";
 import Contactus from "./Pages/Header/Contactus";
 import Careers from "./Pages/Header/Careers";
-import Landing from "./Pages/Landing";
+import Landing from "./Pages/LandingPage/Landing";
 import SocialMedia from "./Pages/services/SocialMedia";
 import WebMobile from "./Pages/services/WebMobile";
 import DataAnalytics from "./Pages/services/DataAnalytics";
