@@ -27,21 +27,40 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative h-[70vh] md:h-[90vh] overflow-hidden">
+
+        <section ref={sectionRef} className="relative overflow-hidden">
+
             <div
                 ref={bgRef}
-                className="absolute inset-0 bg-cover bg-[center_60%] md:bg-[center_20%] will-change-transform"
+                className="w-full h-[50vh] md:h-[60vh] lg:h-[90vh] bg-cover bg-[center_20%] will-change-transform"
                 style={{ backgroundImage: `url(${hero})` }}
             />
+            <div className="relative lg:absolute lg:inset-0 z-10">
+                <div className="flex items-start lg:items-center justify-start h-full lg:px-20 lg:pt-72">
+                    <div className="bg-gradient-to-r from-[#4DCA79] to-[#1CBDDD] p-4 md:p-6 w-full lg:max-w-2xl shadow-2xl ">
+                        <h1 className="text-white font-bold mb-6">
+                          
+                            <span className="block sm:hidden text-4xl">
+                                We Crush Your <br/> Competitors, <br/> Goals, And Sales <br/> Records - Without <br/> The B.S.
+                            </span>
 
-            <div className="relative z-10 flex items-center justify-start h-full lg:pl-40  lg:pt-72">
-                <div className="bg-gradient-to-r from-[#4DCA79] to-[#1CBDDD] p-8 md:p-10 max-w-md md:max-w-xl  shadow-2xl">
-                    <h1 className="text-white text-3xl md:text-4xl  font-bold mb-6">
-                        We Crush Your <br /> Competitors, Goals, And Sales Records - Without <br /> The B.S.
-                    </h1>
-                    <button className="bg-[#F28D35] hover:bg-orange-500 uppercase cursor-pointer text-white font-semibold px-6 py-2 rounded-md transition-colors duration-300">
-                        Get Free Consultation
-                    </button>
+                            <span className="hidden md:block lg:hidden text-5xl">
+                                We Crush Your 
+                                Competitors,  <br /> Goals, And 
+                                Sales Records -  <br /> Without  The B.S. 
+                            </span>
+                        
+                        <span className="hidden lg:block text-5xl">
+                                We Crush Your <br />
+                                Competitors, Goals, And <br />
+                                Sales Records - Without <br />
+                                The B.S.
+                            </span>
+                        </h1>
+                        <button className="bg-[#F28D35] hover:bg-orange-500 uppercase cursor-pointer text-white font-semibold px-6 py-2 rounded-md transition-colors duration-300">
+                            Get Free Consultation
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
