@@ -3,16 +3,20 @@ import Logo from '../assets/Logo.png';
 import { Link } from 'react-router-dom';
 
 function Header() {
-  return (
-    <div className='bg-[#4F46E5] flex items-center p-4 h-20 justify-between'>
-      <img src={Logo} alt="Logo" className='p-9' />
+    return (
+        <div className='bg-[#4F46E5] flex items-center px-10 h-20 justify-between'>
+            <Link to="/">
+                <img src={Logo} alt="Logo" className='pl-10'/>
+            </Link>
 
-      <div>
-        <Link to="/services">Services </Link>
-        <Link to="/aboutus">About Us</Link>
-      </div>
-    </div>
-  )
+            <div className='text-white space-x-4 text-md'>
+                <Link className="uppercase" to="/services">Services </Link>
+                <Link className="uppercase" to="/aboutus">About Us</Link>
+                <Link className="uppercase" to="/contactus">Contact Us</Link>
+                <Link className="uppercase" to="/careers">Careers</Link>
+            </div>
+        </div>
+    )
 }
 
 export default Header
