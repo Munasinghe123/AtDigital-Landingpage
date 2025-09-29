@@ -2,7 +2,7 @@ import React from 'react'
 
 function Landing() {
   return (
-    <div>
+    <div className='h-full'>
       Landing
 
     </div>
