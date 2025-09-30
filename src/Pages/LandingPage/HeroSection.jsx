@@ -2,6 +2,8 @@ import React, { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import hero from "../../assets/heroImage1.jpg";
+import { useGSAP } from '@gsap/react';
+ import SplitType from 'split-type'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,6 +28,8 @@ export default function HeroSection() {
         return () => ctx.revert();
     }, []);
 
+
+
     return (
 
         <section ref={sectionRef} className="relative overflow-hidden">
@@ -39,18 +43,18 @@ export default function HeroSection() {
                 <div className="flex items-start lg:items-center justify-start h-full lg:px-20 lg:pt-72">
                     <div className="bg-gradient-to-r from-[#4DCA79] to-[#1CBDDD] p-4 md:p-6 w-full lg:max-w-2xl shadow-2xl ">
                         <h1 className="text-white font-bold mb-6">
-                          
-                            <span className="block sm:hidden text-4xl">
-                                We Crush Your <br/> Competitors, <br/> Goals, And Sales <br/> Records - Without <br/> The B.S.
+
+                            <span className="hero-title block sm:hidden text-4xl">
+                                We Crush Your <br /> Competitors, <br /> Goals, And Sales <br /> Records - Without <br /> The B.S.
                             </span>
 
-                            <span className="hidden md:block lg:hidden text-5xl">
-                                We Crush Your 
-                                Competitors,  <br /> Goals, And 
-                                Sales Records -  <br /> Without  The B.S. 
+                            <span className="hero-title hidden md:block lg:hidden text-5xl">
+                                We Crush Your
+                                Competitors,  <br /> Goals, And
+                                Sales Records -  <br /> Without  The B.S.
                             </span>
-                        
-                        <span className="hidden lg:block text-5xl">
+
+                            <span className="hero-title hidden lg:block text-5xl">
                                 We Crush Your <br />
                                 Competitors, Goals, And <br />
                                 Sales Records - Without <br />
