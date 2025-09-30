@@ -17,7 +17,7 @@ const FAQ_DATA = [
 
 export default function Faq() {
  
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (idx) => {
     setOpenIndex((prev) => (prev === idx ? null : idx));
