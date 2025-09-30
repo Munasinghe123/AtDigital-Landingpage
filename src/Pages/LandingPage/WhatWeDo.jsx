@@ -29,7 +29,7 @@ function WhatWeDo() {
             trigger: row,
             start: "top 90%",
             end: "bottom 10%",
-            toggleActions: "play reverse play reverse",
+            toggleActions: "play none none reverse",
             invalidateOnRefresh: true
           }
         }
@@ -40,7 +40,7 @@ function WhatWeDo() {
         {
           y: 0, autoAlpha: 1, duration: 0.8, ease: "power2.out", stagger: 0.12,
           immediateRender: false,
-          scrollTrigger: { trigger: row, start: "top 90%", end: "bottom 10%", toggleActions: "play reverse play reverse" }
+          scrollTrigger: { trigger: row, start: "top 90%", end: "bottom 10%", toggleActions: "play none none reverse" }
         }
       );
     });
@@ -55,7 +55,7 @@ function WhatWeDo() {
             trigger: row,
             start: "top 90%",
             end: "bottom 10%",
-            toggleActions: "play reverse play reverse",
+             toggleActions: "play none none reverse",
             invalidateOnRefresh: true
           }
         }
@@ -66,7 +66,7 @@ function WhatWeDo() {
         {
           y: 0, autoAlpha: 1, duration: 0.8, ease: "power2.out", stagger: 0.12,
           immediateRender: false,
-          scrollTrigger: { trigger: row, start: "top 90%", end: "bottom 10%", toggleActions: "play reverse play reverse" }
+          scrollTrigger: { trigger: row, start: "top 90%", end: "bottom 10%",   toggleActions: "play none none reverse" }
         }
       );
     });
@@ -80,11 +80,11 @@ function WhatWeDo() {
       <div className="space-y-20 md:space-y-32 flex flex-col">
 
 
-        <div className="wwd-row from-left flex flex-col md:flex-row items-center gap-10 md:gap-28 mt-10">
+        <div className="wwd-row from-left flex flex-col md:flex-row  items-center gap-10 md:gap-28 mt-10">
           <div className="md:basis-1/2 wwd-piece">
             <img src={image2} className="w-full h-auto max-w-lg mx-auto" />
           </div>
-          <div className="md:basis-1/2 wwd-piece flex flex-col items-start justify-center gap-3">
+          <div className="md:basis-1/2 wwd-piece flex flex-col md:items-start text-center md:text-start items-center justify-center gap-5 md:gap-3">
             <span className="text-[#4F46E5] text-2xl md:text-3xl font-bold">
               Web & Mobile App Development
             </span>
@@ -101,7 +101,7 @@ function WhatWeDo() {
           <div className="md:basis-1/2 wwd-piece">
             <img src={image1} className="w-full h-auto max-w-lg mx-auto" />
           </div>
-          <div className="md:basis-1/2 wwd-piece flex flex-col items-start justify-center gap-3">
+          <div className="md:basis-1/2 wwd-piece flex flex-col md:items-start  text-center md:text-start items-center justify-center gap-5 md:gap-3">
             <span className="text-[#4F46E5] text-2xl md:text-3xl font-bold">
               Digital Strategy Consulting
             </span>

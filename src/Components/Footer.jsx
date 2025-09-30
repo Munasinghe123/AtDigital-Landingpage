@@ -6,7 +6,7 @@ import Logo from "../assets/Logo.png";
 export default function Footer() {
     return (
         <footer className="bg-[#4F46E5] text-white  w-full">
-            <div className="mx-auto  px-20 py-10">
+            <div className="mx-auto  px-7 lg:px-20 py-10">
 
                 <div className="grid  gap-10 md:grid-cols-3 items-start">
 
@@ -21,7 +21,7 @@ export default function Footer() {
                     </div>
 
 
-                    <div className="justify-self-end">
+                    <div className="items-start lg:justify-self-end">
                         <h4 className="text-white font-semibold">Our Technologies</h4>
                         <ul className="mt-3 space-y-2 text-sm text-white">
                             <li>ReactJS</li>
@@ -32,7 +32,7 @@ export default function Footer() {
                     </div>
 
 
-                    <div className="justify-self-end">
+                    <div className="items-start lg:justify-self-end">
                         <h4 className="text-white font-semibold">Our Services</h4>
                         <ul className="mt-3 space-y-2 text-sm text-white">
                             <li><Link className="hover:underline" to="/services/social">Social Media Marketing</Link></li>
@@ -44,16 +44,16 @@ export default function Footer() {
 
 
                 <div className="flex justify-center">
-                    <hr className="mb-2 mt-10 border-[#FFFFFF] border-t-1 w-1/2" />
+                    <hr className="mb-2 mt-10 border-[#FFFFFF] border-t-1 lg:w-1/2 w-full" />
                 </div>
 
 
 
-                <div className="flex flex-col items-center justify-center gap-3 md:flex-row md:justify-center text-xs">
+                <div className="flex items-center justify-center gap-3 flex-row md:justify-center text-xs">
                     <Link to="/privacy" className="hover:underline">
                         Privacy Policy
                     </Link>
-                    <span className="hidden md:inline text-white/60">|</span>
+                    <span className="inline text-white/60">|</span>
                     <Link to="/terms" className="hover:underline">
                         Terms &amp; Conditions
                     </Link>
