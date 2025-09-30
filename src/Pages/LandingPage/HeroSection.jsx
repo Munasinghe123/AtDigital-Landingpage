@@ -36,7 +36,7 @@ export default function HeroSection() {
 
             <div
                 ref={bgRef}
-                className="w-full h-[50vh] md:h-[60vh] lg:h-[90vh] bg-cover bg-[center_20%] will-change-transform"
+                className="w-full h-[50vh] md:h-[70vh] lg:h-[90vh] bg-cover bg-[center_20%] will-change-transform"
                 style={{ backgroundImage: `url(${hero})` }}
             />
             <div className="relative lg:absolute lg:inset-0 z-10">
