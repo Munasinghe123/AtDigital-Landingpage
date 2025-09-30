@@ -105,7 +105,7 @@ function WhatWeDo() {
               Web & Mobile App Development
             </span>
             <p>Your web and mobile Apps are pieces of the puzzle to grow your business. We use frameworks which tailor content and engagement methods to respond to different intents shown by your potential customers who interact with your business online.</p>
-            <button className="bg-[#F28D35] hover:bg-orange-500 text-white font-semibold px-6 py-2 rounded-md">
+            <button className="bg-[#F28D35] hover:bg-orange-500 cursor-pointer text-white font-semibold px-6 py-2 rounded-md">
               LEARN MORE
             </button>
           </div>
@@ -120,7 +120,7 @@ function WhatWeDo() {
               Digital Strategy Consulting
             </span>
             <p>Your digital strategy should complement the overall marketing strategy of the company. In online marketing, each component will never work in isolation and every business needs a different mix. We provide a clear concept and strategic overview to find the most efficient model for your business.</p>
-            <button className="bg-[#F28D35] hover:bg-orange-500 text-white font-semibold px-6 py-2 rounded-md">
+            <button className="bg-[#F28D35] hover:bg-orange-500 cursor-pointer text-white font-semibold px-6 py-2 rounded-md">
               LEARN MORE
             </button>
           </div>
