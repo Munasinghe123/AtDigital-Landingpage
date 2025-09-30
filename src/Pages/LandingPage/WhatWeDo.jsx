@@ -1,19 +1,91 @@
 import React from 'react'
+import { useRef } from 'react'
 import image1 from '../../assets/whatwedo1.png'
 import image2 from '../../assets/whatwedo2.png'
 
-function WhatWeDo() {
-  return (
-    <div className="min-h-screen px-6 md:px-16 lg:px-40 py-10">
-      <div className="space-y-20 md:space-y-40 flex flex-col">
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
-       
-        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-28 mt-10">
-          <div className="md:basis-1/2">
+gsap.registerPlugin(ScrollTrigger);
+
+function WhatWeDo() {
+
+  const scope = useRef(null);
+
+  useGSAP(() => {
+    const root = scope.current;
+
+    const leftRows = root.querySelectorAll(".wwd-row.from-left");
+    const rightRows = root.querySelectorAll(".wwd-row.from-right");
+
+    leftRows.forEach((row) => {
+      gsap.fromTo(row,
+        { autoAlpha: 0, x: "-25vw" },
+        {
+          autoAlpha: 1, x: 0, duration: 1.2, ease: "power4.out",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: row,
+            start: "top 90%",
+            end: "bottom 10%",
+            toggleActions: "play reverse play reverse",
+            invalidateOnRefresh: true
+          }
+        }
+      );
+
+      gsap.fromTo(row.querySelectorAll(".wwd-piece"),
+        { y: 40, autoAlpha: 0 },
+        {
+          y: 0, autoAlpha: 1, duration: 0.8, ease: "power2.out", stagger: 0.12,
+          immediateRender: false,
+          scrollTrigger: { trigger: row, start: "top 90%", end: "bottom 10%", toggleActions: "play reverse play reverse" }
+        }
+      );
+    });
+
+    rightRows.forEach((row) => {
+      gsap.fromTo(row,
+        { autoAlpha: 0, x: "25vw" },
+        {
+          autoAlpha: 1, x: 0, duration: 1.2, ease: "power4.out",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: row,
+            start: "top 90%",
+            end: "bottom 10%",
+            toggleActions: "play reverse play reverse",
+            invalidateOnRefresh: true
+          }
+        }
+      );
+
+      gsap.fromTo(row.querySelectorAll(".wwd-piece"),
+        { y: 40, autoAlpha: 0 },
+        {
+          y: 0, autoAlpha: 1, duration: 0.8, ease: "power2.out", stagger: 0.12,
+          immediateRender: false,
+          scrollTrigger: { trigger: row, start: "top 90%", end: "bottom 10%", toggleActions: "play reverse play reverse" }
+        }
+      );
+    });
+
+    const onLoad = () => ScrollTrigger.refresh();
+    window.addEventListener("load", onLoad);
+    return () => window.removeEventListener("load", onLoad);
+  }, { scope });
+  return (
+    <div ref={scope} className="min-h-screen px-6 md:px-16 lg:px-40 py-10">
+      <div className="space-y-20 md:space-y-32 flex flex-col">
+
+
+        <div className="wwd-row from-left flex flex-col md:flex-row items-center gap-10 md:gap-28 mt-10">
+          <div className="md:basis-1/2 wwd-piece">
             <img src={image2} className="w-full h-auto max-w-lg mx-auto" />
           </div>
-          <div className="md:basis-1/2 flex flex-col items-start justify-center gap-3">
-            <span className="text-[#4F46E5] text-2xl md:text-3xl">
+          <div className="md:basis-1/2 wwd-piece flex flex-col items-start justify-center gap-3">
+            <span className="text-[#4F46E5] text-2xl md:text-3xl font-bold">
               Web & Mobile App Development
             </span>
             <p>Your web and mobile Apps are pieces of the puzzle to grow your business.
@@ -24,13 +96,13 @@ function WhatWeDo() {
           </div>
         </div>
 
-        
-        <div className="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-28">
-          <div className="md:basis-1/2">
+
+        <div className="wwd-row from-right flex flex-col md:flex-row-reverse items-center gap-10 md:gap-28">
+          <div className="md:basis-1/2 wwd-piece">
             <img src={image1} className="w-full h-auto max-w-lg mx-auto" />
           </div>
-          <div className="md:basis-1/2 flex flex-col items-start justify-center gap-3">
-            <span className="text-[#4F46E5] text-2xl md:text-3xl">
+          <div className="md:basis-1/2 wwd-piece flex flex-col items-start justify-center gap-3">
+            <span className="text-[#4F46E5] text-2xl md:text-3xl font-bold">
               Digital Strategy Consulting
             </span>
             <p>Your digital strategy should complement the overall marketing strategy of the company.
